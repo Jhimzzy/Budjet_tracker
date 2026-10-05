@@ -12,6 +12,7 @@ def test_add_income(monkeypatch):
     assert transactions[0]["type"] == "income"
     assert transactions[0]["amount"] == 5000
     assert transactions[0]["category"] == "Salary"
+    assert transactions[0]["note"] == "Monthly salary"
 
 
 def test_add_expense(monkeypatch):
@@ -25,3 +26,4 @@ def test_add_expense(monkeypatch):
     assert transactions[0]["type"] == "expense"
     assert transactions[0]["amount"] == 2000
     assert transactions[0]["category"] == "Food"
+    assert transactions[0]["note"] == "Lunch"
